@@ -79,7 +79,7 @@
     
     for (NSString *syl in addsyl) {
         NSArray *match_array = [replacedString componentsMatchedByRegex:[NSString stringWithFormat:@"%@",syl]];
-        syllables -= [match_array count];
+        syllables += [match_array count];
     }
 
     // exceptions
