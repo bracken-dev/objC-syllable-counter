@@ -10,7 +10,7 @@
 
 @implementation SyllableCounter
 
-+ (int)SyllableCountForWord:(NSString*)word  {
++ (int)syllableCountForWord:(NSString*)word  {
     // Basic array of lots of words
     NSArray *subsyl = [NSArray arrayWithObjects:@"cial", @"tia", @"cius", @"cious", @"uiet", @"gious", @"geous", @"priest",
                        @"giu", @"dge", @"ion", @"iou", @"sia$", @".che$", @".ched$", @".abe$",
@@ -100,12 +100,12 @@
     return syllables;
 }
 
-+ (int)SyllableCountForWords:(NSString*)words  {
++ (int)syllableCountForWords:(NSString*)words  {
     NSArray *myWords = [words componentsSeparatedByString:@" "];
     
     int totalCount = 0;
     for (NSString *word in myWords) {
-        int wordCount = [SyllableCounter SyllableCountForWord:word];
+        int wordCount = [SyllableCounter syllableCountForWord:word];
         totalCount += wordCount;
     }
     

@@ -11,7 +11,7 @@
 
 @interface SyllableCounter : NSObject
 
-+ (int)SyllableCountForWord:(NSString*)word;
-+ (int)SyllableCountForWords:(NSString*)words;
++ (int)syllableCountForWord:(NSString*)word;
++ (int)syllableCountForWords:(NSString*)words;
 
 @end
