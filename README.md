@@ -10,9 +10,9 @@ To get RegexKitLite working, go to the project target, other linker flags, and a
 
 There are two class methods, one to count the syllables in a words, and one to count syllables in multiple words.
 
-`int syllable_count = [SyllableCounter SyllableCountForWord:@"happy"]`
+`int syllable_count = [SyllableCounter syllableCountForWord:@"happy"]`
 
-`int syllable_count = [SyllableCounter SyllableCountForWords:@"coding is fun"]`
+`int syllable_count = [SyllableCounter syllableCountForWords:@"coding is fun"]`
 
 Credit
 ------
