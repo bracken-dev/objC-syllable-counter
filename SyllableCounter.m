@@ -39,7 +39,8 @@
     
     // UBER EXCEPTIONS - WHOLE WORDS THAT SLIP THROUGH THE NET OR
     // SOMEHOW THROW A WOBBLY
-    NSArray *exceptions_one = [NSArray arrayWithObjects:@"abe", @"ace", @"ade", @"age", @"ale", @"are", @"use", @"ate", nil];
+    NSArray *exceptions_one = [NSArray arrayWithObjects:@"abe", @"ace", @"ade", @"age", @"ale", @"are", @"use", @"ate", @"sense", @"resolve", nil];
+    NSArray *exceptions_two = [NSArray arrayWithObjects:@"created", nil];
     
     /*
     # Based on Greg Fast's Perl module Lingua::EN::Syllables
@@ -85,6 +86,10 @@
     // exceptions
     if ([exceptions_one containsObject:[word lowercaseString]]) {
         syllables -= 1;
+    }
+                               
+    if ([exceptions_two containsObject:[word lowercaseString]]) {
+        syllables += 1;
     }
     
     // Add valid word parts to syllable count
